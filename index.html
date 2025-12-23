@@ -721,7 +721,7 @@
             if (SWIPE_STATE.lastX !== null) {
                 const delta = x - SWIPE_STATE.lastX;
                 SWIPE_STATE.velocity = SWIPE_STATE.velocity * 0.7 + delta * 0.3;
-                if (Math.abs(SWIPE_STATE.velocity) > 0.02 && STATE.time > SWIPE_STATE.cooldown) {
+                if (Math.abs(SWIPE_STATE.velocity) > 0.012 && STATE.time > SWIPE_STATE.cooldown) {
                     if (SWIPE_STATE.velocity < 0) handleSwipe('LEFT');
                 }
             }
@@ -1053,5 +1053,6 @@
     </script>
 </body>
 </html>
+
 
 
