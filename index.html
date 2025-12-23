@@ -141,9 +141,9 @@
             photoOrnamentSize: 3.645
         };
 
-        const ASSET_BASE = window.location.protocol === 'file:'
+       const ASSET_BASE = window.location.protocol === 'file:'
             ? 'file:///C:/Users/chengwentao/Desktop/chrismax/images/ours/'
-            : `${window.location.origin}/images/ours/`;
+            : new URL('./images/ours/', window.location.href).toString();
         // Single photo layout configuration (camera space)
         const PHOTO_LAYOUT = {
             width: 20,
@@ -1053,4 +1053,5 @@
     </script>
 </body>
 </html>
+
 
